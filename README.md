@@ -4,10 +4,10 @@ Este repositorio contiene un script en R diseñado para analizar los resultados 
 ## Instalación de Paquetes
 El script utiliza los paquetes `ggplot2` para la visualización de datos y `dplyr` para la manipulación de datos. Si aún no los tienes instalados, puedes hacerlo ejecutando los siguientes comandos en R:
 
-```R
+```
 install.packages("ggplot2")
 install.packages("dplyr")
-```R
+```
 
 ## Preparación de los Datos
 Antes de empezar, debes cargar tus datos en R. En este ejemplo, el conjunto de datos se llama Encuesta_Economia_Incremento_IVA. Asegúrate de tener este dataframe disponible en tu entorno de R.
