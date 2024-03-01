@@ -39,6 +39,8 @@ ggplot(datos, aes(x = reorder(Alternativas, -Porcentaje), y = Porcentaje, fill =
        caption = "Fuente: Wassap-Economía Presencial") +
   theme(plot.caption = element_text(hjust = 1))
 ```
+### Explicación de las líneas de código del gráfico
+
   # ggplot(datos, aes(x = reorder(Alternativas, -Porcentaje), y = Porcentaje, fill = Alternativas)): 
     Esta línea inicializa el gráfico utilizando el dataframe datos. Se especifica que el eje x debe ordenar las Alternativas de acuerdo con el -Porcentaje (el signo menos indica orden descendente, así que las barras más       grandes aparecen primero o a la izquierda). El eje y muestra el Porcentaje de respuestas para cada alternativa. El argumento fill = Alternativas colorea las barras según la alternativa a la que pertenecen.
 
