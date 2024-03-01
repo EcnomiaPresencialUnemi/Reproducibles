@@ -20,9 +20,11 @@ datos <- datos %>%
 Esta línea transforma el dataframe datos, agregando una nueva columna Porcentaje que representa el porcentaje de respuestas para cada alternativa basado en el total de respuestas.
 ```
 ## Ordenamiento de los Datos
+```
 Para visualizar los resultados de manera efectiva, ordenamos los datos por el porcentaje de respuestas de forma descendente:
 datos <- datos[order(-datos$Porcentaje),]
 Esto asegura que las alternativas con mayores porcentajes se muestren primero en el gráfico, facilitando la interpretación de los resultados.
+```
 
 ## Creación del Gráfico
 Finalmente, se utiliza ggplot2 para crear un gráfico de barras que muestre el porcentaje de respuestas para cada alternativa:
