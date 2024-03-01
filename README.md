@@ -20,11 +20,10 @@ datos <- datos %>%
   mutate(Porcentaje = Respuestas / sum(Respuestas) * 100)
 ```
 ## Ordenamiento de los Datos
-```
 Para visualizar los resultados de manera efectiva, ordenamos los datos por el porcentaje de respuestas de forma descendente
 Esto asegura que las alternativas con mayores porcentajes se muestren primero en el gráfico, facilitando la interpretación de los resultados:
+```
 datos <- datos[order(-datos$Porcentaje),]
-
 ```
 
 ## Creación del Gráfico
