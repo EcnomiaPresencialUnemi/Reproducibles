@@ -27,7 +27,9 @@ datos <- datos[order(-datos$Porcentaje),]
 ```
 
 ## Creación del Gráfico
-Finalmente, se utiliza ggplot2 para crear un gráfico de barras que muestre el porcentaje de respuestas para cada alternativa:
+Finalmente, se utiliza ggplot2 para crear un gráfico de barras que muestre el porcentaje de respuestas para cada alternativa.
+Cada parte del código contribuye a una característica específica del gráfico:
+```
 ggplot(datos, aes(x = reorder(Alternativas, -Porcentaje), y = Porcentaje, fill = Alternativas)) +
   geom_bar(stat = "identity") +
   geom_text(aes(label = paste0(round(Porcentaje, 1), "%")), position = position_dodge(width = 0.9), vjust = -0.25) +
@@ -36,8 +38,7 @@ ggplot(datos, aes(x = reorder(Alternativas, -Porcentaje), y = Porcentaje, fill =
        x = "", y = "Porcentaje",
        caption = "Fuente: Wassap-Economía Presencial") +
   theme(plot.caption = element_text(hjust = 1))
-Este bloque de código en R utiliza la librería ggplot2 para crear un gráfico de barras que visualiza los resultados de una encuesta. Cada parte del código contribuye a una característica específica del gráfico:
-
+```
   # ggplot(datos, aes(x = reorder(Alternativas, -Porcentaje), y = Porcentaje, fill = Alternativas)): 
     Esta línea inicializa el gráfico utilizando el dataframe datos. Se especifica que el eje x debe ordenar las Alternativas de acuerdo con el -Porcentaje (el signo menos indica orden descendente, así que las barras más       grandes aparecen primero o a la izquierda). El eje y muestra el Porcentaje de respuestas para cada alternativa. El argumento fill = Alternativas colorea las barras según la alternativa a la que pertenecen.
 
