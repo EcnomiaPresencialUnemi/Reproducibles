@@ -18,13 +18,13 @@ El script calcula el porcentaje de respuestas para cada alternativa de la encues
 ```
 datos <- datos %>%
   mutate(Porcentaje = Respuestas / sum(Respuestas) * 100)
-
 ```
 ## Ordenamiento de los Datos
 ```
-Para visualizar los resultados de manera efectiva, ordenamos los datos por el porcentaje de respuestas de forma descendente:
+Para visualizar los resultados de manera efectiva, ordenamos los datos por el porcentaje de respuestas de forma descendente
+Esto asegura que las alternativas con mayores porcentajes se muestren primero en el gráfico, facilitando la interpretación de los resultados:
 datos <- datos[order(-datos$Porcentaje),]
-Esto asegura que las alternativas con mayores porcentajes se muestren primero en el gráfico, facilitando la interpretación de los resultados.
+
 ```
 
 ## Creación del Gráfico
