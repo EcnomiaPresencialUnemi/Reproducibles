@@ -45,20 +45,26 @@ ggplot(datos, aes(x = reorder(Alternativas, -Porcentaje), y = Porcentaje, fill =
 ```
     Esta línea inicializa el gráfico utilizando el dataframe datos. Se especifica que el eje x debe ordenar las Alternativas de acuerdo con el -Porcentaje (el signo menos indica orden descendente, así que las barras más       grandes aparecen primero o a la izquierda). El eje y muestra el Porcentaje de respuestas para cada alternativa. El argumento fill = Alternativas colorea las barras según la alternativa a la que pertenecen.
 ```
-geom_bar(stat = "identity"):
+geom_bar(stat = "identity") +
 ```
     Añade las barras al gráfico. El argumento stat = "identity" indica que la altura de las barras debe corresponder exactamente a los valores en el eje y (en este caso, el porcentaje de respuestas).
-
-  # geom_text(aes(label = paste0(round(Porcentaje, 1), "%")), position = position_dodge(width = 0.9), vjust = -0.25): 
+```
+geom_text(aes(label = paste0(round(Porcentaje, 1), "%")), position = position_dodge(width = 0.9), vjust = -0.25) +
+```
     Esta línea coloca etiquetas de texto dentro o cerca de las barras, mostrando el porcentaje de respuestas redondeado a un decimal seguido del símbolo %. position_dodge(width = 0.9) ajusta la posición del texto para         evitar que se superponga en barras adyacentes, y vjust = -0.25 mueve el texto ligeramente hacia arriba para que aparezca encima de las barras.
-
-  # theme_minimal(): 
+```
+theme_minimal() +
+```
     Aplica un tema minimalista al gráfico, que simplifica el fondo y los elementos decorativos para centrarse en los datos.
-
-  # labs(title = "Resultados encuesta Incremento del IVA", x = "", y = "Porcentaje", caption = "Fuente: Wassap-Economía Presencial"): 
+```
+labs(title = "Resultados encuesta Incremento del IVA",
+    x = "", y = "Porcentaje",
+    caption = "Fuente: Wassap-Economía Presencial") +
+```
     Personaliza las etiquetas del gráfico, incluyendo el título, las etiquetas de los ejes (en este caso, se deja la del eje x vacía) y la fuente de los datos, que se muestra como un subtítulo en la parte inferior del         gráfico.
-
-  # theme(plot.caption = element_text(hjust = 1)): 
+```
+theme(plot.caption = element_text(hjust = 1))
+```
     Ajusta la posición de la fuente (caption) para alinearla a la derecha del gráfico (hjust = 1).
 
 ## Ejecución del Código
