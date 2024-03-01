@@ -10,7 +10,7 @@ install.packages("dplyr")
 ## Preparación de los Datos
 Antes de empezar, debes cargar tus datos en R. En este ejemplo, el conjunto de datos se llama Encuesta_Economia_Incremento_IVA. Asegúrate de tener este dataframe disponible en tu entorno de R.
 
-# Cálculo del Porcentaje de Respuestas
+## Cálculo del Porcentaje de Respuestas
 El script calcula el porcentaje de respuestas para cada alternativa de la encuesta con el objetivo de entender cómo se distribuyen las opiniones:
 datos <- datos %>%
   mutate(Porcentaje = Respuestas / sum(Respuestas) * 100)
