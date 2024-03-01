@@ -44,8 +44,9 @@ ggplot(datos, aes(x = reorder(Alternativas, -Porcentaje), y = Porcentaje, fill =
 ggplot(datos, aes(x = reorder(Alternativas, -Porcentaje), y = Porcentaje, fill = Alternativas)) +
 ```
     Esta línea inicializa el gráfico utilizando el dataframe datos. Se especifica que el eje x debe ordenar las Alternativas de acuerdo con el -Porcentaje (el signo menos indica orden descendente, así que las barras más       grandes aparecen primero o a la izquierda). El eje y muestra el Porcentaje de respuestas para cada alternativa. El argumento fill = Alternativas colorea las barras según la alternativa a la que pertenecen.
-
-  # geom_bar(stat = "identity"): 
+```
+geom_bar(stat = "identity"):
+```
     Añade las barras al gráfico. El argumento stat = "identity" indica que la altura de las barras debe corresponder exactamente a los valores en el eje y (en este caso, el porcentaje de respuestas).
 
   # geom_text(aes(label = paste0(round(Porcentaje, 1), "%")), position = position_dodge(width = 0.9), vjust = -0.25): 
