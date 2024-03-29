@@ -17,20 +17,24 @@ Si prefieres puedes tambien copiar y pegar en un Script de RStudio cada uno de e
 # Instalar las librerías necesarias
 install.packages("ggplot2") # para realizar el grafico
 install.packages("readr") # para cargar la data en formato csv
-```
+
 # Cargar las librerías necesarias
 library(ggplot2)
 library(readr)
-
+```
+```
 # Cargar los datos desde el archivo CSV y pasarla al objeto datos_pib
 datos_pib <- read_csv("ruta/al/archivo/data-fy7Vp.csv")
-
+```
+```
 # Renombrar las columnas del dataframe datos_pib
 colnames(datos_pib) <- c("Años", "Tasa de Crecimiento")
-
+```
+```
 # Convertir Tasa de Crecimiento a numérico, eliminando el signo de porcentaje
 datos_pib$`Tasa de Crecimiento` <- as.numeric(sub("%", "", datos_pib$`Tasa de Crecimiento`))
-
+```
+```
 # Generar el gráfico de líneas
 ggplot(datos_pib) +
   aes(x = Años, y = `Tasa de Crecimiento`) +
@@ -51,7 +55,7 @@ ggplot(datos_pib) +
     axis.title.x = element_text(size = 12, face = "bold")
   ) +
   scale_x_continuous(breaks = seq(2014, 2024, by = 1))  # Añadir marcas para cada año
-
+```
 
 
 
