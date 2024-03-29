@@ -57,12 +57,7 @@ ggplot(datos_pib) +
   scale_x_continuous(breaks = seq(2014, 2024, by = 1))  # Añadir marcas para cada año
 ```
 
-
-
-
-Cargar la librería ggplot2:
-  - library(ggplot2)
-
+***Explicación del código para generar el gráfico:***
 Generar el gráfico de líneas utilizando ggplot():
   - ggplot(datos_pib): Inicia la creación del gráfico utilizando 'datos_pib' como el conjunto de datos.
   - aes(x = Años, y = `Tasa de Crecimiento`): Establece los ejes, mapeando 'Años' al eje X y 'Tasa de Crecimiento' al eje Y.
