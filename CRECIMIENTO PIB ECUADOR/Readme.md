@@ -1,6 +1,12 @@
 ## Gráfico de tasas de crecimiento del PIB de Ecuador
 Para reproducir el gráfico con código R debes hacer lo siguiente:
 
+1. Descargar el archivo 'data-fy7Vp'.
+2. Descargar el script: 'Tasa crecimiento PIB Ecuador.R'
+3. Da doble clic en el archivo del script que acabas de descargar y se abrirá automáticamente en RStudio
+4. Carga a RStudio el archivo 'data-fy7Vp'.
+5. Corre en RStudio cada una de las instrucciones
+
 
 
 
